@@ -35,24 +35,12 @@
         />
       </a>
 
-      <address class="header__address">
-        <ul class="header__address-list">
-          <li class="header__links-list-item_no-bullit">
-            <a href="tel:+99995555555" class="header__address-link"
-              >+9 999 555 5555</a
-            >
-          </li>
-          <li class="header__links-list-item_no-bullit">
-            <a href="mailto:info@sobaka.ge" class="header__address-link"
-              >info@sobaka.ge</a
-            >
-          </li>
-          <li class="header__links-list-item_no-bullit">
-            <p class="header__address-link header__address-link_no-border">
-              наб. Принсенграхт 263- 265, Амстердам
-            </p>
-          </li>
-        </ul>
+      <address class="address header__address">
+        <a class="address__link" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="address__link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p class="address__text header__address-link_no-border">
+          наб. Принсенграхт 263- 265, Амстердам
+        </p>
       </address>
     </header>
     <main>
@@ -70,7 +58,7 @@
             <p class="cover__description-text letter-spacing-extended">
               Аукцион вещей, в которые никто не верил
             </p>
-            <button class="bet-button">Сделать ставку</button>
+            <button type="button" class="bet-button">Сделать ставку</button>
           </div>
         </div>
       </section>
@@ -80,20 +68,16 @@
         <ul class="lots__card-list">
           <li class="lots__card-list-item">
             <a href="#0" class="card-link">
-              <article class="card">
+              <article class="card card_type_film">
                 <div class="overlay"></div>
-                <img
-                  src="./images/film-rezhissyora-kotoryj-brosil-kinoshkolu.png"
-                  class="card_image card_type_film"
-                />
                 <div class="card__details">
                   <h3 class="card__title">
                     Фильм режиссёра, который бросил киношколу
                   </h3>
                   <p class="card__text">
                     Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-                    ставка,<br />
-                    если бы вы не знали, что режиссёр — Пол Томас Андерсон?
+                    ставка, если бы вы не знали, что режиссёр — Пол Томас
+                    Андерсон?
                   </p>
                 </div>
               </article>
@@ -101,12 +85,8 @@
           </li>
           <li class="lots__card-list-item">
             <a href="#0" class="card-link">
-              <article class="card">
+              <article class="card card_type_book">
                 <div class="overlay"></div>
-                <img
-                  src="./images/kniga-gde-opisan-odin-skuchnyj-den-iz-zhizni-reklamnogo-agenta.jpg"
-                  class="card_image card_type_film"
-                />
                 <div class="card__details">
                   <h3 class="card__title">
                     Книга, где описан один скучный день из жизни рекламного
@@ -126,12 +106,8 @@
           </li>
           <li class="lots__card-list-item">
             <a href="#0" class="card-link">
-              <article class="card">
+              <article class="card card_type_picture">
                 <div class="overlay"></div>
-                <img
-                  src="./images/kartina-kotoruyu-povtorit-dazhe-5-letnij-syn-maminoj-podrugi.png"
-                  class="card_image card_type_film"
-                />
                 <div class="card__details">
                   <h3 class="card__title">
                     Картина, которую повторит даже 5-летний сын маминой подруги
@@ -140,8 +116,7 @@
                     Ну действительно, там линия, тут кружочек, а здесь и вовсе
                     что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
                     котиков... Сколько бы вы на такое поставили, если бы не
-                    знали, что это — одна из<br />
-                    революционных работ Кандинского?
+                    знали, что это — одна из революционных работ Кандинского?
                   </p>
                 </div>
               </article>
@@ -152,11 +127,15 @@
       </section>
 
       <section class="about" id="about">
-        <span class="about__logo">
-          <img src="./images/logo-white.png" class="about__logo-image" />
-        </span>
+        <div class="about__logo">
+          <img
+            src="./images/logo-white.png"
+            class="about__logo-image"
+            alt="Оно тебе надо лого"
+          />
+        </div>
         <div class="about__column">
-          <h4 class="about__title">Об аукционе</h4>
+          <h2 class="about__title">Об аукционе</h2>
           <p class="about__text">
             Здесь вы не встретите очередное пафосное собрание невероятно
             дорогого антиквариата. Наши лоты вообще не должны были попасть ни на
@@ -176,11 +155,11 @@
       </section>
     </main>
     <footer class="footer">
-      <adress class="address">
-        <a href="tel:+99995555555">+9 999 555 5555</a>
-        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        <p>наб. Принсенграхт 263- 265, Амстердам</p>
-      </adress>
+      <address class="address footer__address">
+        <a class="address__link" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="address__link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p class="address__text">наб. Принсенграхт 263- 265, Амстердам</p>
+      </address>
       <nav class="footer__menu">
         <ul class="footer__menu-list">
           <li class="footer__menu-list-item footer__links-list-item_no-bullit">

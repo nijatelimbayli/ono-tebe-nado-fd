@@ -2,8 +2,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  height: 293px;
-  padding: 92px 50px 96px;
+  padding: 92px 50px 93px;
   gap: 37px;
 }
 
@@ -43,49 +42,47 @@
   height: 105px;
 }
 
-.header__address-link {
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-style: normal;
+}
+
+.address__link {
   color: #000;
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
   line-height: 1.35;
-}
-
-.header__address-link_no-border {
-  border-bottom: none;
-}
-
-.header__address-list {
-  display: flex;
-  flex-direction: column;
 }
 
 .header__address {
   max-width: 240px;
   justify-self: end;
-  font-style: normal;
 }
 
 .cover {
   position: relative;
+  display: flex;
   background: url("../images/lotus-flower.png") center / cover no-repeat;
-  height: 757px;
+  min-height: 757px;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.6);
 }
 
 .cover__details {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   padding: 165px 50px 50px;
 }
 
@@ -131,6 +128,7 @@
 }
 
 .bet-button {
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
@@ -159,37 +157,51 @@
 .lots__card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 25px;
+  gap: 25px;
 }
 
 .lots__card-list-item {
-  position: relative;
-  inset: 0;
   list-style: none;
   width: 100%;
   height: 100%;
 }
 
 .card {
-  width: 334px;
-  height: 596px;
   position: relative;
-  inset: 0;
+  display: flex;
+  width: 334px;
+  min-height: 596px;
+}
+
+.card-link {
+  text-decoration: none;
 }
 
 .card__details {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  width: 100%;
   padding: 48px 40px;
 }
 
 .card_image {
   background: center / cover no-repeat;
+}
+
+.card_type_film {
+  background-image: url("../images/film-rezhissyora-kotoryj-brosil-kinoshkolu.png");
+}
+
+.card_type_book {
+  background-image: url("../images/kniga-gde-opisan-odin-skuchnyj-den-iz-zhizni-reklamnogo-agenta.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/kartina-kotoruyu-povtorit-dazhe-5-letnij-syn-maminoj-podrugi.png");
 }
 
 .card__title {
@@ -203,6 +215,7 @@
 .card__text {
   font-size: 20px;
   line-height: 120%;
+  letter-spacing: 1%;
 }
 
 .lots__look-more-link {
@@ -215,8 +228,7 @@
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 595px;
+  grid-template-columns: min-content 1fr;
   gap: 72px;
   padding: 0 24px 180px;
 }
@@ -239,9 +251,9 @@
 }
 
 .about__column {
-  width: 693px;
-  min-height: 449px;
-  padding-top: 133px;
+  max-width: 693px;
+  width: 100%;
+  padding-top: 106px;
 }
 
 .about__title {
@@ -249,13 +261,13 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 100px;
-  margin-top: -30px;
 }
 
 .about__text {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
   padding-bottom: 24px;
+  letter-spacing: 1%;
 }
 
 .about__text:last-child {
@@ -266,24 +278,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  height: 180px;
   padding: 0 50px 82px;
 }
 
-.address {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.footer__address {
   max-width: 265px;
-}
-
-.address a {
-  text-decoration: none;
-  border-bottom: 1px solid #000;
-}
-
-.address p {
-  text-decoration: none;
 }
 
 .footer__menu-list {
@@ -292,6 +291,8 @@
 }
 
 .footer__menu-link {
+  font-size: 18px;
+  line-height: 1.2;
   text-transform: lowercase;
   text-decoration: none;
   border-bottom: 1px solid #000;
@@ -308,13 +309,6 @@
   gap: 48px;
   min-width: 240px;
 }
-
-.footer__social-list-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #000;
-  border-radius: 100%;
-  height: 48px;
-  width: 48px;
+.footer__social-icon {
+  display: block;
 }
